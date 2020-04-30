@@ -6,3 +6,6 @@ The python file creates plots to represent the viewing angle as seen from the to
 Also includes table with relevant values.
 
 Right now, this web app includes information for a tablet, desktop, home cinema, and cinema. A table-top display will be incorporated in the future.
+
+
+For convenience, enter "pip install -r requirements.txt" into the command line to install all the necessary libraries for the code.
