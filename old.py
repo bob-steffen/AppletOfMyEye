@@ -6,10 +6,6 @@ import numpy as np
 import plotly.graph_objects as go
 import math
 
-
-
-
-
 def draw_pixels(figure, x_0, x_1, y_0, y_1):
     figure.add_shape(
                 dict(
@@ -1875,15 +1871,13 @@ cinema_figure_side.add_trace(go.Scatter(x=[cinema_head_xpos/2], y=[cinema_displa
 """Making the Application"""
 app = dash.Dash(__name__)
 
-app.layout = html.Div(children=[
-    html.Div(
+lukes_images = (
+        html.Div(
         className="app-header",
         children=[
         html.Div('Light Field Display Spatial/Angular Trade Analysis', className="app-header--title")
         ]
     ),
-
-
     html.Div(
         children=[
         dcc.Graph(
@@ -1902,7 +1896,11 @@ app.layout = html.Div(children=[
             )
         ],
         style={ 'display': 'inline-block'}
-    ),
+    )
+)
+
+app.layout = html.Div(children=[
+    *lukes_images,
 
     html.Div(children=[
         html.Table(
